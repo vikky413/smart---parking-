@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://vikky4nu:Vikram123@cluster0.mdhxb.gcp.mongodb.net/vehicle?retryWrites=true&w=majority",{ useNewUrlParser:true , useCreateIndex:true,});
+mongoose.connect(process.env.MONGOURL,{ useNewUrlParser:true , useCreateIndex:true,});
 
 var conn = mongoose.Collection;
 var userSchema = new mongoose.Schema({
